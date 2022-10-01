@@ -5,6 +5,8 @@ len("JJJJutin")
 8
 type(12345)
 <class 'int'>
+bool(0)
+False
 """
 """
 print("處存")
