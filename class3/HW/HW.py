@@ -10,3 +10,15 @@ EX:
 請輸入華氏溫度:ABC
 輸入錯誤!
 """
+try:
+    num = int(input('請輸入華氏溫度:'))
+    total = (num - 32 ) * (5 / 9)
+    print(total)
+except ValueError:
+    print('請輸入數字')
+except:
+    print('發生錯誤')
+else:
+    print('成功執行')
+finally:
+    print('程式結束')
