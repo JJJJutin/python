@@ -38,11 +38,11 @@ False or False = False
 # else:
 #     print("Jutin YOUR COMMAND IS WRONG!!!")
 
-num = input("Please Enter A Number:")
-num = int(num)
-if (num / 2) / 2 == 2:
-    print("偶數")
-elif num != 0:
-    print("基數")
-else:
-    print("這是 0")
+# num = input("Please Enter A Number:")
+# num = int(num)
+# if (num / 2) / 2 == 2:
+#     print("偶數")
+# elif num != 0:
+#     print("基數")
+# else:
+#     print("這是 0")
