@@ -9,6 +9,7 @@ time.sleep(1) # 延遲1秒
 """
 import turtle
 import time
+turtle.tracer(1, 0)
 turtle.pensize(5)
 turtle.color("red")
 for start in range(0, 360, 6):

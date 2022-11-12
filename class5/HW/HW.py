@@ -5,6 +5,7 @@ t0_turtle_stamp.jpg
 turtle.home()是讓烏龜回到原點的指令
 """
 import turtle
+turtle.tracer(0, 0)
 turtle.shape("circle")
 turtle.stamp()
 for start in range(0, 360, 45):
