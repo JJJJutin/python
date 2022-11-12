@@ -16,6 +16,9 @@ EX
 18
 """
 
-x = int(input(""))
-for i in range(x):
-    print(" " * (x - i - 1) + "*" * (i * 2 + 1))
+a = int(input())
+b = 1
+while b <= a:
+    if b % 3 == 0 or b % 7 == 0:
+        print(b)
+    b += 1
