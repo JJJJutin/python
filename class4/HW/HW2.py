@@ -8,7 +8,7 @@ print("輸入三角形三邊")
 a = float(input("輸入邊a:"))
 b = float(input("輸入邊b:"))
 c = float(input("輸入邊c:"))
-if a + b > c:
+if a + b > c and a + c > b and b + c > a:
     all = a + b + c
     p = 1/2 (a+b+c)
     area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
