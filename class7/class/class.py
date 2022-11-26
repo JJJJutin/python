@@ -35,39 +35,39 @@
 #     print(i)
 #     i += 1
 
-# while True:
-#     print("1.蘋果汁")
-#     print("2.柳橙汁")
-#     print("3.葡萄汁")
-#     print("4.系統關閉")  
-# try:
-#     x = int(input("請輸入編號:"))
-# except:
-#     print("分不清數字和文字喔")
-# if x == 4 :
-#     print("系統已關閉")
-#     break
-# elif x == 3 :
-#     print("您點的飲料是葡萄汁")
-# elif x == 2 :
-#     print("您點的飲料是柳橙汁")
-# elif x == 1 :
-#     print("您點的飲料是蘋果汁")
-# else:
-#     print("看不懂數字嗎?沒上過幼稚園嗎?")
+while True:
+    print("1.蘋果汁")
+    print("2.柳橙汁")
+    print("3.葡萄汁")
+    print("4.系統關閉")  
+    try:
+        x = int(input("請輸入編號:"))
+    except:
+        print("分不清數字和文字喔")
+    if x == 4 :
+        print("系統已關閉")
+        break
+    elif x == 3 :
+        print("您點的飲料是葡萄汁")
+    elif x == 2 :
+        print("您點的飲料是柳橙汁")
+    elif x == 1 :
+        print("您點的飲料是蘋果汁")
+    else:
+        print("看不懂數字嗎?沒上過幼稚園嗎?")
 
 # while True:
 #     print(r.randrange(10))
-import random as r
-import time as t
+# import random as r
+# import time as t
 
-ans = (r.randint(1,100))
-while True:
-    x = int(input("請輸入1~100的整數:"))
-    if x == ans:
-        print("恭喜答對了")
-        break
-    elif x > ans:
-        print("在小一點")
-    elif x < ans:
-        print("在大一點")
+# ans = (r.randint(1,100))
+# while True:
+#     x = int(input("請輸入1~100的整數:"))
+#     if x == ans:
+#         print("恭喜答對了")
+#         break
+#     elif x > ans:
+#         print("在小一點")
+#     elif x < ans:
+#         print("在大一點")

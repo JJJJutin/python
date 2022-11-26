@@ -23,9 +23,9 @@
 # len(['a', 'b'])
 # len([1, 2, 3])
 
-# l = ['a', 'b', 'c']
-# for index in range(len(l)):
-#     print(l[index])
+l = ['a', 'b', 'c']
+for index in range(len(l)):
+    print(l[index])
 
 # l = ['a', 'b', 'c']
 # for element in l:
@@ -54,7 +54,7 @@
 # a = l.copy()
 # a[0] = 1
 # print(a, l) ans:[1, 'b', 'c'] ['a', 'b', 'c']
-
+"""
 juices = ["汁", "橙汁", "葡萄汁", "系統關閉"]
 while True:
     for i in range(len(juices)):
@@ -74,3 +74,4 @@ while True:
         print("看不懂數字嗎?沒上過幼稚園嗎?")
     else:
         print(f"您點的飲料是{juices[x-1]}")
+"""
