@@ -8,13 +8,25 @@ from PIL import Image, ImageTk
 os.chdir(sys.path[0])
 
 def on_switch_change():
-    global temp
-    if check_type == True:
-        label3.config(text= f'溫度:{(int(temp)-32)*5/9}°C')
+    global temp, units
+    print("kkk")
+    if check_type.get():
+        units = "metric" 
+        print("m")
     else:
-        label3.config(text= f'溫度:{int(temp)*9/5+32}°F')
+        units = "imperial" 
+        print("i")
+
+    if label3.cget("text") != "溫度:?°C":
+        if units == "metric":
+            temp = round((temp - 32) * 5 / 9, 2)
+            label3.config(text= f'溫度:{temp}°C')
+        elif units == "imperial":
+            temp = round(temp * 9 / 5 + 32, 2)
+            label3.config(text= f'溫度:{temp}°F')
 
 def ans_show():
+    global units
     api_key = "0ded44d7b7e6e734e1c0049be0cd8d2d"  #api key
     #api URL
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
