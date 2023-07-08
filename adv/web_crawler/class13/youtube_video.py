@@ -8,7 +8,7 @@ from weather_fun import weather_fun as wf
 os.chdir(sys.path[0])
 
 ######################主程式########################
-u = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+u = "https://www.youtube.com/watch?v=eq8r1ZTma08"
 
 
 def get_video_info_gui():
