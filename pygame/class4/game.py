@@ -7,7 +7,7 @@ import random
 
 ####################定義函式######################
 def gophers_update():
-    global tick, pos, score, times
+    global tick, pos, score, times, gophers_tick, hitsur
     if tick > max_tick:
         new_pos = random.randint(0, 5)
         pos = pos6[new_pos]
@@ -15,8 +15,16 @@ def gophers_update():
         times += 1
     else:
         tick += 1
+
+    if hitsur == gophers2:
+        if gophers_tick > gophers_max_tick:
+            hitsur = gophers
+            gophers_tick = 0
+        else:
+            gophers_tick += 1
+
     screen.blit(
-        gophers,
+        hitsur,
         (pos[0] - gophers.get_width() / 2, pos[1] - gophers.get_height() / 2))
 
 
@@ -67,7 +75,7 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 clock = pygame.time.Clock()
 tick = 0
-max_tick = 5
+max_tick = 20
 bg_img = "Gophers_BG_800x600.png"
 bg = pygame.image.load(bg_img)
 
@@ -84,7 +92,7 @@ pos6 = [[195, 305], [400, 305], [610, 305], [195, 450], [400, 450], [610, 450]]
 pos = pos6[0]
 gophers = pygame.image.load("Gophers150.png")
 gophers2 = pygame.image.load("Gophers2_150.png")
-goph = gophers
+hitsur = gophers
 gophers_tick = 0
 gophers_max_tick = 5
 ######################分數物件######################
@@ -103,9 +111,11 @@ ham2 = pygame.image.load("Hammer2.png")
 hammer = ham2
 hammer_tick = 0
 hammer_max_tick = 5
+######################聲音物件######################
+pygame.mixer.music.load("hit.mp3")
 ######################循環偵測######################
 while True:
-    clock.tick(60)
+    clock.tick(30)
     mouse_pos = pygame.mouse.get_pos()
 
     for event in pygame.event.get():
@@ -118,14 +128,14 @@ while True:
                            pos[1] + 50):
                 tick = max_tick + 1
                 score += 1
-                goph = gophers2
+                hitsur = gophers2
+                pygame.mixer.music.play()
 
     if times >= times_max:
         game_over()
     else:
         screen.blit(bg, (0, 0))
         gophers_update()
-        pygame.draw.circle(screen, BLUE, mouse_pos, 10)
         score_update()
         times_update()
         mouse_update()
