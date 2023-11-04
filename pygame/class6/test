@@ -1,0 +1,7 @@
+i = 0
+while True:
+    print(i)
+    if i >= 10:
+        i = 0
+    else:
+        i += 1
