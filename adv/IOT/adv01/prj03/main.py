@@ -11,7 +11,7 @@ led = PWM(Pin(2), freq=frequency, duty=duty_cycle)
 delay = 0.002
 
 #########################主程式#########################
-while True:1
+while True:
     for duty_cycle in range(1023, -1, -1):
         led.duty(duty_cycle)
         sleep(delay)
