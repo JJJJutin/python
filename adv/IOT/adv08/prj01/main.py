@@ -1,6 +1,6 @@
 #########################匯入模組#########################
 import time
-import mcu
+import adv10.mcu as mcu
 from machine import ADC
 
 
